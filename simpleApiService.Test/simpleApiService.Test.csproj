@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MSTest" Version="3.1.1" />
+    <PackageReference Include="Moq" Version="4.20.69" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="UnitTests\" />
+    <None Remove="UnitTests\Middlewares\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UnitTests\" />
+    <Folder Include="UnitTests\Middlewares\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\simpleApiExercise\simpleApiExercise.csproj" />
+    <ProjectReference Include="..\simpleApiExercise.Common\simpleApiExercise.Common.csproj" />
+  </ItemGroup>
+</Project>

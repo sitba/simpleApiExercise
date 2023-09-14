@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\simpleApiExercise.DTOs\simpleApiExercise.DTOs.csproj" />
+    <ProjectReference Include="..\simpleApiService.Database\simpleApiService.Database.csproj" />
+    <ProjectReference Include="..\simpleApiExercise.Mapping\simpleApiExercise.Mapping.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Providers\" />
+    <None Remove="Utils\" />
+    <None Remove="Utils\Validation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Providers\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Utils\Validation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Moq" Version="4.20.69" />
+  </ItemGroup>
+</Project>

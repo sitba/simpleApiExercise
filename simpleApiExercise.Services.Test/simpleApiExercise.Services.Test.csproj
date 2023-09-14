@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MSTest" Version="3.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="UnitTests\" />
+    <None Remove="UnitTests\Utils\" />
+    <None Remove="UnitTests\Utils\Validation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UnitTests\" />
+    <Folder Include="UnitTests\Utils\" />
+    <Folder Include="UnitTests\Utils\Validation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\simpleApiExercise.Services\simpleApiExercise.Services.csproj" />
+    <ProjectReference Include="..\simpleApiExercise.Common\simpleApiExercise.Common.csproj" />
+    <ProjectReference Include="..\simpleApiService.Database\simpleApiService.Database.csproj" />
+    <ProjectReference Include="..\simpleApiExercise.DTOs\simpleApiExercise.DTOs.csproj" />
+  </ItemGroup>
+</Project>
